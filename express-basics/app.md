@@ -2,9 +2,9 @@
 
 1. passo
 
-    nodemon é uma ferramenta que ajuda no desenvolvimento utilizando NodeJS, automaticamente reiniciando a aplicação quando são detectadas novas alterações no diretório do projeto.
-    
-    Consulte a documentação: https://www.npmjs.com/package/nodemon
+   nodemon é uma ferramenta que ajuda no desenvolvimento utilizando NodeJS, automaticamente reiniciando a aplicação quando são detectadas novas alterações no diretório do projeto.
+
+   Consulte a documentação: https://www.npmjs.com/package/nodemon
 
 ```
 npm install nodemon
@@ -29,15 +29,14 @@ npm install nodemon
 npm start
 ```
 
-
 # Mensagens HTTP
 
 Mensagens HTTP são um mecanismo usado para fazer conexões de dados entre o serivdor e o cliente utilizando o protocolo HTTP.
-Existem dois tipos de mensagem:  `requests`, que são as requisições que o cliente está enviando para o servidor, e `response` que é a resposta do servidor para esta requisição.
+Existem dois tipos de mensagem: `requests`, que são as requisições que o cliente está enviando para o servidor, e `response` que é a resposta do servidor para esta requisição.
 
 ## Métodos HTTP
 
-|  |  |
+|        |                 |
 | ------ | --------------- |
 | GET    | ler dados       |
 | POST   | inserir dados   |
@@ -51,6 +50,7 @@ O express é um framework para desenvolvimento web utilizado em conjunto com o N
 ```javascript
 npm install express --save
 ```
+
 OBS: caso não funcione, consulte a documentação: https://expressjs.com/
 
 ## Fundamentos do express
@@ -58,12 +58,14 @@ OBS: caso não funcione, consulte a documentação: https://expressjs.com/
 Para utilizar o express, é necessário primeiramente importar o express para o seu projeto.
 
 ```js
-const express = require('express');
+const express = require("express");
 const app = express();
 ```
+
 OU
+
 ```js
-const app = require('express')();
+const app = require("express")();
 ```
 
 Você pode adotar a sintaxe que mais lhe agradar, porém a primeira é o modo como a documentação utiliza e acredito que deixe o código mais legível.
@@ -72,20 +74,20 @@ Você pode adotar a sintaxe que mais lhe agradar, porém a primeira é o modo co
 
 ### app.get('/', [callback])
 
-### app.all('*', [callback...], callback)
+### app.all('\*', [callback...], callback)
 
 ```js
-router.all('/api/(.*)', requireAuthentication, loadUser)
+router.all("/api/(.*)", requireAuthentication, loadUser);
 ```
 
 ### app.status(number)
 
 ```js
-app.status(404).all('*', makeSomething)
+app.status(404).all("*", makeSomething);
 ```
 
 ### Para estilizações, imagens e outros arquivos estáticos, por convenção, devemos criar uma pasta chamada public e colocar todos os arquivos lá.
 
 ```js
-app.use(express.static('./public'))
+app.use(express.static("./public"));
 ```

@@ -1,16 +1,15 @@
 // Globals - NO WINDOW !!!!
 
-// __dirname 
+// __dirname
 //__filename
-// require 
+// require
 // module
 // process
 
-
-console.log(__dirname)
-console.log(__filename)
-count = 0
-setInterval(()=>{
-    console.log(`${count} seconds`)
-    count += 1
-}, 1000)
+console.log(__dirname);
+console.log(__filename);
+count = 0;
+setInterval(() => {
+  console.log(`${count} seconds`);
+  count += 1;
+}, 1000);

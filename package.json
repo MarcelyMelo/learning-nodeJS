@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "prettier": "3.5.3"
+  },
+  "scripts": {
+    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
+  }
+  
+
+}
